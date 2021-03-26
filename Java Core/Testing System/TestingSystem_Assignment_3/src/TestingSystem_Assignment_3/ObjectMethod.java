@@ -53,8 +53,7 @@ public class ObjectMethod {
 		departments[2] = department3;
 		departments[3] = department4;
 		departments[4] = department5;
-
-		Question6(departments);
+	
 		Question7(departments);
 	}
 	
@@ -84,7 +83,7 @@ public class ObjectMethod {
 	public static void Question6(Department[] departments) {
 		for (int i = 0; i < departments.length; i++) {
 			for (int j = 0; j < departments.length;j++) {
-				if ((int) departments[i].Name.toUpperCase().charAt(0) < (int) departments[j].Name.toUpperCase().charAt(0)) {
+				if (departments[i].Name.compareToIgnoreCase(departments[j].Name) < 0) {
 					Department temp = departments[i];
 					departments[i] = departments[j];
 					departments[j] = temp;
@@ -95,19 +94,26 @@ public class ObjectMethod {
 	}
 	public static void Question7(Department[] departments) {
 		for (int i = 0; i < departments.length; i++) {
-			String[] arr = departments[i].Name.split("\\s+");
-			String  s1 = arr[arr.length-1];
+			String reserve = ReserveName(departments[i].Name);
 			for (int j = 0; j < departments.length; j++) {
-				String[] arr2 = departments[j].Name.split("\\s+");
-				String  s2 = arr[arr.length-1];
-				
-				if (s1.toUpperCase().charAt(0)<s2.toUpperCase().charAt(0)) {
+				String reserve2 = ReserveName(departments[j].Name);
+				if (reserve.compareToIgnoreCase(reserve2)<0) {
 					Department temp = departments[i];
 					departments[i] = departments[j];
 					departments[j] = temp;
 				}
 			}
+			
 		}
-		Question2(departments);
+		Question2(departments);	
 	}
+	public static String ReserveName(String s1) {
+		String[] words = s1.split("\\s+");
+		String result = "";
+		for (int i = words.length-1 ; i >=0 ; i--) {
+			result += words[i] + " ";
+		}
+		return result.trim();
+	}
+	
 }
