@@ -26,10 +26,10 @@ public class TapChi extends TaiLieu{
 		System.out.println("Nhập tháng phát hành: ");
 		thangPhatHanh = scanner.nextInt();
 	}
+	
 	@Override
-	public void getInfor() {
-		super.getInfor();
-		System.out.println("Số phát hành: " + soPhatHanh);
-		System.out.println("Tháng phát hành: " + thangPhatHanh);
+	public String toString() {
+		
+		return "Tạp chí: " + super.toString() + "Số phát hành: " + soPhatHanh + "Tháng phát hành: " + thangPhatHanh;
 	}
 }

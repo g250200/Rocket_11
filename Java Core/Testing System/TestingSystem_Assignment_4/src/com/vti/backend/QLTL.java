@@ -68,7 +68,8 @@ public class QLTL {
 	//  hiển thị thông tin tài liệu;
 	public void printTaiLieu() {
 		for (TaiLieu taiLieu : taiLieus) {
-			taiLieu.getInfor();
+			System.out.println(taiLieu);
+			System.out.println("");
 		}
 	}
 	// tìm kiếm tài liệu theo các loại;
@@ -84,19 +85,19 @@ public class QLTL {
 			case 1:
 				if (taiLieu instanceof Sach) {
 					taiLieu = (Sach) taiLieu;
-					taiLieu.getInfor();
+					System.out.println(taiLieu);
 				}
 				break;
 			case 2:
 				if (taiLieu instanceof TapChi) {
 					taiLieu = (TapChi) taiLieu;
-					taiLieu.getInfor();
+					System.out.println(taiLieu);
 				}
 				break;
 			case 3:
 				if (taiLieu instanceof Bao) {
 					taiLieu = (Bao) taiLieu;
-					taiLieu.getInfor();
+					System.out.println(taiLieu);
 				}
 				break;
 

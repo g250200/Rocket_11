@@ -19,9 +19,10 @@ public class Bao extends TaiLieu{
 		System.out.println("Nhập ngày phát hành: " );
 		ngayPhatHanh= scanner.nextInt();
 	}
+	
 	@Override
-	public void getInfor() {
-		super.getInfor();
-		System.out.println("Ngày phát hành: " + ngayPhatHanh);
-	} 
+	public String toString() {
+		
+		return "Báo: " + super.toString() + ", Ngày phát hành: " + ngayPhatHanh;
+	}
 }

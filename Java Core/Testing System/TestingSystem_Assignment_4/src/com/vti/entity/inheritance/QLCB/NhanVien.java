@@ -19,9 +19,10 @@ public class NhanVien extends CanBo{
 		System.out.println("Nhập công việc: ");
 		congViec = scanner.nextLine();
 	}
+	
 	@Override
-	public void getInfor() {
-		super.getInfor();
-		System.out.println("Công việc: " + congViec);
+	public String toString() {
+		
+		return "Nhân Viên: " + super.toString() + ", Công việc: " +congViec;
 	}
 }

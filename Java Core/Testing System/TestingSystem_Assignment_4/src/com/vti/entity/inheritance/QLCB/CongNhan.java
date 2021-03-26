@@ -20,8 +20,8 @@ public class CongNhan extends CanBo{
 		bac = scanner.nextInt();
 	}
 	@Override
-	public void getInfor() {
-		super.getInfor();
-		System.out.println("Bậc: " + bac);
+	public String toString() {
+		return "CongNhan: "  + super.toString() + ", bac = " + bac;
 	}
+	
 }

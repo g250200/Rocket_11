@@ -39,7 +39,7 @@ public class CanBo {
 	}
 	@Override
 	public String toString() {
-		return "CanBo [hoTen=" + hoTen + ", tuoi=" + tuoi + ", gioiTinh=" + gioiTinh + ", diaChi=" + diaChi + "]";
+		return "CanBo: hoTen = " + hoTen + ", tuoi = " + tuoi + ", gioiTinh = " + gioiTinh + ", diaChi = " + diaChi ;
 	}
 	public void input() {
 		Scanner scanner = new Scanner(System.in);
@@ -55,10 +55,5 @@ public class CanBo {
 		diaChi = scanner.nextLine();
 		
 	}
-	public void getInfor() {
-		System.out.println("Họ tên: " + hoTen);
-		System.out.println("Tuổi: " + tuoi);
-		System.out.println("Giới tính: " + getGioiTinh());
-		System.out.println("Địa chỉ: " + diaChi);
-	}
+	
 }

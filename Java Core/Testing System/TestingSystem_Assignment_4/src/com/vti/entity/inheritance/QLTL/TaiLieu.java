@@ -33,9 +33,11 @@ public class TaiLieu {
 		System.out.println("Nhập số bản phát hành: ");
 		soBanPhatHanh = scanner.nextInt();
 	}
-	public void getInfor() {
-		System.out.println("Mã tài liệu" + maTaiLieu);
-		System.out.println("Tên nhà xuất bản: " + tenNhaXuatban);
-		System.out.println("Số bản phát hành: " + soBanPhatHanh);
+
+	@Override
+	public String toString() {
+		return "TaiLieu:  maTaiLieu = " + maTaiLieu + ", Tên Nhà Xuấtt bản:  " + tenNhaXuatban + ", Số bản phát hành: "
+				+ soBanPhatHanh ;
 	}
+	
 }

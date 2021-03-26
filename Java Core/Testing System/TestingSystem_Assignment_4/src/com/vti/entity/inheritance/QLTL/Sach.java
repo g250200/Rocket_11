@@ -26,10 +26,10 @@ public class Sach extends TaiLieu{
 		System.out.println("Nhập số trang: ");
 		soTrang = scanner.nextInt();
 	}
+	
 	@Override
-	public void getInfor() {
-		super.getInfor();
-		System.out.println("Tên tác giả: " + tenTacGia);
-		System.out.println("Số trang: " + soTrang);
+	public String toString() {
+		
+		return "Sách: " + super.toString() + "Tên tác giả: " + tenTacGia + "Số trang = " + soTrang;
 	}
 }

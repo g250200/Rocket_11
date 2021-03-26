@@ -53,7 +53,8 @@ public class QLCB {
 	// in ra can bo
 	public void printInforCanBo() {
 		for (CanBo canBo : canBos) {
-			canBo.getInfor();
+			System.out.println(canBo);
+			System.out.println("");
 		}
 	}
 	// tìm cán bộ theo tên
@@ -62,7 +63,7 @@ public class QLCB {
 		String hoten = scanner.nextLine();
 		for (CanBo canBo : canBos) {
 			if (canBo.getHoTen().equals(hoten)) {
-				canBo.getInfor();
+				System.out.println(canBo);
 			}
 		}
 		scanner.close();
@@ -71,7 +72,12 @@ public class QLCB {
 	public void deleteCanBo() {
 		Scanner scanner = new Scanner(System.in);
 		String hoten = scanner.nextLine();
-		canBos.removeIf(canBo->canBo.getHoTen().equals(hoten));
+		//canBos.removeIf(canBo->canBo.getHoTen().equals(hoten));
+		for (CanBo canBo : canBos) {
+			if (canBo.getHoTen().equals(hoten)) {
+				canBos.remove(canBo);
+			}
+		}
 		scanner.close();
 	}
 	
