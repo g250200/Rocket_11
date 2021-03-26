@@ -67,7 +67,7 @@ public class Student {
 			
 			string ="Giỏi";
 		}
-		return ("Name: " + student_Name + " ,Xếp loại: " + string);
+		return ("Name: " + student_Name + ", Điểm: " + score +" ,Xếp loại: " + string);
 	}
 
 }

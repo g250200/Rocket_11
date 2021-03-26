@@ -19,15 +19,16 @@ public class Account {
 		return balence;
 	}
 	public int credit(int amount) {
-		return amount;
+		return balence + amount;
 	}
 
 	public int debit(int amount) {
-		return amount;
+		return balence - amount;
 	}
 
-	public void tranferTo(Account account, int amount) {
-		System.out.println("Tranfer " + account + " to " + account.getName());
+	public void transferTo(Account account, int amount) {
+		debit(amount);
+		account.credit(amount);
 	}
 
 }

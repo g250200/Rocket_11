@@ -22,7 +22,10 @@ public class QLTL {
 		n = scanner.nextInt();
 		for(int i = 0; i<n ; i++) {
 			int index;
-			System.out.println("Tài liệu bạn muốn nhập là (1: Sách, 2: Tạp chí, 3: Báo)");
+			System.out.println("Tài liệu bạn muốn nhập ");
+			System.out.println("1: Sách");
+			System.out.println("2: Tạp chí");
+			System.out.println("3: Báo");
 			index = scanner.nextInt();
 			switch (index) {
 			case 1:
@@ -54,7 +57,12 @@ public class QLTL {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Nhập mã tài liệu bạn muốn xóa: ");
 		ma = scanner.nextInt();
-		taiLieus.removeIf(taiLieu->taiLieu.getMaTaiLieu()==ma);
+		//taiLieus.removeIf(taiLieu->taiLieu.getMaTaiLieu()==ma);
+		for (TaiLieu taiLieu : taiLieus) {
+			if (taiLieu.getMaTaiLieu() == ma) {
+				taiLieus.remove(taiLieu);
+			}
+		}
 		System.out.println("Xóa thành công");
 	}
 	//  hiển thị thông tin tài liệu;
@@ -66,7 +74,10 @@ public class QLTL {
 	// tìm kiếm tài liệu theo các loại;
 	public void findtaiLieu() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("Nhập tài liệu bạn muốn tìm kiếm (1: Sách, 2: Tạp chí, 3: Báo)");
+		System.out.println("Nhập tài liệu bạn muốn tìm kiếm");
+		System.out.println("1: Sách");
+		System.out.println("2: Tạp chí");
+		System.out.println("3: Báo");
 		int index = scanner.nextInt();
 		for (TaiLieu taiLieu : taiLieus) {
 			switch (index) {

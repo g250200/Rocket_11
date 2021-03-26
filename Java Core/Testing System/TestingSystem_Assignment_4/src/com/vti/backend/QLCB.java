@@ -21,7 +21,10 @@ public class QLCB {
 		n = scanner.nextInt();
 		for(int i=0; i<n; i++) {
 			int index;
-			System.out.println("Cán bộ bạn muốn nhập là (1: Công nhân, 2: Kỹ sư, 3: Nhân viên)");
+			System.out.println("Cán bộ bạn muốn nhập");
+			System.out.println("1: Công nhân");
+			System.out.println("2: Kỹ sư");
+			System.out.println("3: Công nhân");
 			index = scanner.nextInt();
 			switch (index) {
 			case 1:
